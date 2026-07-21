@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace Sistema_restaurante_sabor_tradicional
         public FrmLogin()
         {
             InitializeComponent();
+         
         }
         private bool contrasenaVisible = false;
       
@@ -37,6 +39,12 @@ namespace Sistema_restaurante_sabor_tradicional
 
             txtContraseña.Focus();
         }
+
+       
+
+ 
+
+
         private void AbrirMenuPrincipal()
         {
             FrmAdministrador menuPrincipal = new FrmAdministrador();
@@ -125,12 +133,7 @@ namespace Sistema_restaurante_sabor_tradicional
                         {
                             if (!lector.Read())
                             {
-                                MessageBox.Show(
-                                    "El usuario o la contraseña son incorrectos.",
-                                    "Acceso denegado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning
-                                );
+                                AntdUI.Message.error(this, "EL USUARIO O LA CONTRASEÑA SON INCORRECTOS.");
 
                                 txtContraseña.Clear();
                                 txtContraseña.Focus();
@@ -164,14 +167,7 @@ namespace Sistema_restaurante_sabor_tradicional
                         }
                     }
                 }
-
-                MessageBox.Show(
-                    $"Bienvenido, {Sesion.NombreUsuario}\n" +
-                    $"Rol: {Sesion.Rol}",
-                    "Inicio de sesión correcto",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                );
+                    AntdUI.Message.success(this,$"Bienvenido, {Sesion.NombreUsuario} {Sesion.Rol}" );
 
                 AbrirMenuPrincipal();
             }
@@ -269,5 +265,9 @@ namespace Sistema_restaurante_sabor_tradicional
                 Application.Exit();
             }
         }
+
+     
+
+      
     }
 }

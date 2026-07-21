@@ -33,9 +33,6 @@
             this.label1 = new AntdUI.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.picVerContrasena = new System.Windows.Forms.PictureBox();
-            this.btnVerContrasena = new AntdUI.Button();
             this.btnSalir = new AntdUI.Button();
             this.btnIniciarsesion = new AntdUI.Button();
             this.lblErrorContrasena = new AntdUI.Label();
@@ -51,14 +48,17 @@
             this.label4 = new AntdUI.Label();
             this.label5 = new AntdUI.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnVerContrasena = new AntdUI.Button();
+            this.picVerContrasena = new System.Windows.Forms.PictureBox();
+            this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picVerContrasena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVerContrasena)).BeginInit();
+            this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlIzquierdo
@@ -104,60 +104,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.picVerContrasena);
-            this.panel1.Controls.Add(this.btnVerContrasena);
-            this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnIniciarsesion);
-            this.panel1.Controls.Add(this.lblErrorContrasena);
-            this.panel1.Controls.Add(this.txtContraseña);
-            this.panel1.Controls.Add(this.lblErrorUsuario);
-            this.panel1.Controls.Add(this.txtUsuario);
-            this.panel1.Controls.Add(this.lblContrasena);
-            this.panel1.Controls.Add(this.lblUsuario);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Location = new System.Drawing.Point(539, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 622);
-            this.panel1.TabIndex = 1;
-            // 
-            // picVerContrasena
-            // 
-            this.picVerContrasena.BackColor = System.Drawing.SystemColors.Window;
-            this.picVerContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picVerContrasena.Location = new System.Drawing.Point(486, 410);
-            this.picVerContrasena.Name = "picVerContrasena";
-            this.picVerContrasena.Size = new System.Drawing.Size(34, 34);
-            this.picVerContrasena.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picVerContrasena.TabIndex = 13;
-            this.picVerContrasena.TabStop = false;
-            this.picVerContrasena.Click += new System.EventHandler(this.picVerContrasena_Click);
-            // 
-            // btnVerContrasena
-            // 
-            this.btnVerContrasena.Location = new System.Drawing.Point(0, 0);
-            this.btnVerContrasena.Name = "btnVerContrasena";
-            this.btnVerContrasena.Size = new System.Drawing.Size(0, 0);
-            this.btnVerContrasena.TabIndex = 0;
-            // 
             // btnSalir
             // 
             this.btnSalir.Icon = ((System.Drawing.Image)(resources.GetObject("btnSalir.Icon")));
-            this.btnSalir.IconGap = 0.15F;
-            this.btnSalir.IconRatio = 1F;
+            this.btnSalir.IconGap = 0.5F;
+            this.btnSalir.IconRatio = 1.5F;
             this.btnSalir.IconSize = new System.Drawing.Size(15, 15);
             this.btnSalir.Location = new System.Drawing.Point(76, 532);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.OriginalBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSalir.OriginalBackColor = System.Drawing.Color.White;
             this.btnSalir.Size = new System.Drawing.Size(455, 45);
             this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "Salir ";
+            this.btnSalir.Type = AntdUI.TTypeMini.Error;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnIniciarsesion
@@ -167,7 +126,7 @@
             this.btnIniciarsesion.IconGap = 0.6F;
             this.btnIniciarsesion.Location = new System.Drawing.Point(76, 483);
             this.btnIniciarsesion.Name = "btnIniciarsesion";
-            this.btnIniciarsesion.OriginalBackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnIniciarsesion.OriginalBackColor = System.Drawing.Color.AliceBlue;
             this.btnIniciarsesion.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnIniciarsesion.Size = new System.Drawing.Size(455, 42);
             this.btnIniciarsesion.TabIndex = 11;
@@ -253,7 +212,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.Location = new System.Drawing.Point(160, 85);
             this.label2.Name = "label2";
@@ -300,6 +259,47 @@
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
+            // btnVerContrasena
+            // 
+            this.btnVerContrasena.Location = new System.Drawing.Point(0, 0);
+            this.btnVerContrasena.Name = "btnVerContrasena";
+            this.btnVerContrasena.Size = new System.Drawing.Size(0, 0);
+            this.btnVerContrasena.TabIndex = 0;
+            // 
+            // picVerContrasena
+            // 
+            this.picVerContrasena.BackColor = System.Drawing.SystemColors.Window;
+            this.picVerContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picVerContrasena.Location = new System.Drawing.Point(486, 410);
+            this.picVerContrasena.Name = "picVerContrasena";
+            this.picVerContrasena.Size = new System.Drawing.Size(34, 34);
+            this.picVerContrasena.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picVerContrasena.TabIndex = 13;
+            this.picVerContrasena.TabStop = false;
+            this.picVerContrasena.Click += new System.EventHandler(this.picVerContrasena_Click);
+            // 
+            // pnlLogin
+            // 
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.Controls.Add(this.picVerContrasena);
+            this.pnlLogin.Controls.Add(this.btnVerContrasena);
+            this.pnlLogin.Controls.Add(this.btnSalir);
+            this.pnlLogin.Controls.Add(this.btnIniciarsesion);
+            this.pnlLogin.Controls.Add(this.lblErrorContrasena);
+            this.pnlLogin.Controls.Add(this.txtContraseña);
+            this.pnlLogin.Controls.Add(this.lblErrorUsuario);
+            this.pnlLogin.Controls.Add(this.txtUsuario);
+            this.pnlLogin.Controls.Add(this.lblContrasena);
+            this.pnlLogin.Controls.Add(this.lblUsuario);
+            this.pnlLogin.Controls.Add(this.label3);
+            this.pnlLogin.Controls.Add(this.pictureBox3);
+            this.pnlLogin.Controls.Add(this.label2);
+            this.pnlLogin.Controls.Add(this.pictureBox4);
+            this.pnlLogin.Location = new System.Drawing.Point(539, 12);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(592, 622);
+            this.pnlLogin.TabIndex = 1;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,7 +309,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pnlIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MinimumSize = new System.Drawing.Size(1200, 700);
@@ -319,11 +319,11 @@
             this.pnlIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picVerContrasena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVerContrasena)).EndInit();
+            this.pnlLogin.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -334,7 +334,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private AntdUI.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private AntdUI.Label label2;
         private AntdUI.Label label3;
@@ -347,11 +346,12 @@
         private AntdUI.Input txtContraseña;
         private AntdUI.Button btnIniciarsesion;
         private AntdUI.Button btnSalir;
-        private AntdUI.Button btnVerContrasena;
         private System.Windows.Forms.PictureBox pictureBox5;
         private AntdUI.Label label4;
         private AntdUI.Label label5;
+        private AntdUI.Button btnVerContrasena;
         private System.Windows.Forms.PictureBox picVerContrasena;
+        private System.Windows.Forms.Panel pnlLogin;
     }
 }
 
